@@ -1,0 +1,69 @@
+﻿html {
+    cursor: default;
+}
+
+header[role=main] {
+    margin-top: 25px;
+    margin-left: 40px;    
+    margin-bottom: 10px;
+}
+
+input[type=text].todo-text {
+    margin-left: 40px;    
+    background-color:#b6ff00;
+    min-height:50px;
+    width:378px;
+    font-size: 30px;
+    padding:10px;
+}
+
+header[role=main] h1
+{
+    padding-top: 6px;
+    color:#808080;
+}
+
+#todoList {
+    margin-left: 35px;  
+}
+
+#todoList .item-container {
+    min-height:60px;
+    width:400px;
+    background-color:#ffd800;
+    border: 1px solid #b6ff00;   
+    z-index : 5;
+}
+
+#todoList .item-container h4.item-title {
+    color: #808080; 
+    font-size: 30px;
+    display:inherit;
+    padding:10px;
+}
+
+#todoList .item-container img
+{
+    width:30px;
+    position:absolute;      
+    top:15px; 
+    left:350px;
+}
+
+
+#todoList .item-container img[alt="false"]
+{
+   visibility:hidden;
+}
+
+
+.win-flyout
+{
+    width:360px;
+}
+
+.win-flyout h1
+{
+    font-size : 23px;
+}
+

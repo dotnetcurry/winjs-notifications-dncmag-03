@@ -1,6 +1,17 @@
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 bin
 obj
+bld
 
 # mstest test results
 TestResults
+
+#Ignore TFS source control files
+##########################################
+*.vssscc
+*.vspscc
+
+
+#Ignore temp files
+#####################
+*.user

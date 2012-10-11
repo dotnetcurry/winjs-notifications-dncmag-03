@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="5ca3ca4b-f973-436c-8609-a6a9223659dc" Version="1.0.0.0" Publisher="CN=Mehfuz" />
+  <Properties>
+    <DisplayName>TodoList</DisplayName>
+    <PublisherDisplayName>Mehfuz</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="TodoList" Logo="images\squareTile-sdk.png" SmallLogo="images\smalllogo.png" Description="TodoList" ForegroundText="dark" BackgroundColor="#ffd800" ToastCapable="false">
+        <LockScreen Notification="badgeAndTileText" BadgeLogo="images\badgelogo.png" />
+        <DefaultTile ShowName="allLogos" WideLogo="images\tile-todo.png" />
+        <SplashScreen Image="images\splashscreen.png" BackgroundColor="#464646" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" StartPage="js\background.js">
+          <BackgroundTasks>
+            <Task Type="timer" />
+            <Task Type="systemEvent" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

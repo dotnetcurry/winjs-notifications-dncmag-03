@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TodoList</title>
+
+    <!-- WinJS references -->
+    <link rel="stylesheet" href="//Microsoft.WinJS.1.0/css/ui-dark.css" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- TodoList references -->
+    <link href="/css/todo.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/js/todo.js"></script>
+
+</head>
+<body>
+    
+    <header role="main">
+        <h1>
+            Tada List
+        </h1>
+    </header>
+   
+    <input class="todo-text" type="text" placeholder="add something" />
+
+    <div id="remiderFlyout" data-win-control="WinJS.UI.Flyout" aria-label="{ Reminder flyout }">
+        <h1>Remind me to complete the task</h1>
+        <div id="datePicker" data-win-control="WinJS.UI.DatePicker"></div>
+        <input type="button" value="Dismiss" id="btnClose" />
+         <input type="button" value="Done" id="btnDone" />
+    </div>
+
+    <div class="item-template" data-win-control="WinJS.Binding.Template">
+        <div class="item-container">
+            <h4 class="item-title" data-win-bind="textContent:title"></h4>
+            <img data-win-bind="alt:completed"  src="/images/tick.png" />
+        </div>
+    </div>
+   
+    <div id="todoList" data-win-control="WinJS.UI.ListView" >
+
+    </div>
+
+    <div id="horizontalAppBar" data-win-control="WinJS.UI.AppBar" data-win-options="{ swipeBehavior : 'select'}">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdDone',label:'Done',icon:'accept',tooltip:'Done', selection : 'global'  }">
+        </button>     
+
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRemove',label:'Delete',icon:'delete',tooltip:'Delete', selection : 'global'  }">
+        </button>     
+
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRemind',label:'Remind',icon:'clock',tooltip:'Remind', selection : 'global'  }">
+        </button>     
+    </div>
+
+
+</body>
+</html>
