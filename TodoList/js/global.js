@@ -27,20 +27,19 @@
             //new Date(dueDate.getYear(), dueDate.getMonth(), dueDate.getDate(),);
 
             var currentDate = new Date();
+            var seconds = 60;
         
-            if (currentDate >= data.dueDate) {
-                data.dueDate = new Date(currentDate.getTime() + 3000);
+            if (currentDate >= new Date(data.dueDate)) {
+                data.dueDate = new Date(currentDate.getTime() + 60 * 1000);
+                // create the notification from the XML
+                var tileNotification = new Windows.UI.Notifications.ScheduledTileNotification(tileXml, data.dueDate);
+                tileNotification.id = data.id;
+
+                // Add to schedule
+                // You can update a secondary tile in the same manner using CreateTileUpdaterForSecondaryTile(tileId)
+                // See "Tiles" sample for more details
+                Windows.UI.Notifications.TileUpdateManager.createTileUpdaterForApplication().addToSchedule(tileNotification);
             }
-
-            // create the notification from the XML
-            var tileNotification = new Windows.UI.Notifications.ScheduledTileNotification(tileXml, data.dueDate);
-
-            tileNotification.id = data.id;
-
-            // Add to schedule
-            // You can update a secondary tile in the same manner using CreateTileUpdaterForSecondaryTile(tileId)
-            // See "Tiles" sample for more details
-            notification.TileUpdateManager.createTileUpdaterForApplication().addToSchedule(tileNotification);
         }
     }
 

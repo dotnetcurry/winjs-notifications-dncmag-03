@@ -85,7 +85,7 @@
             }
 
             if (!matched) {
-                jSon.push({ id: data.id, title: data.title, dueDate: datePicker.winControl.current });
+                jSon.push({ id: item.data.id, title: item.data.title, dueDate: datePicker.winControl.current });
                 settings.values.reminders = JSON.stringify(jSon);
             }
 
