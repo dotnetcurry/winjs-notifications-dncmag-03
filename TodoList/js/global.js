@@ -22,14 +22,13 @@
             var text = tileXml.getElementsByTagName("text");
 
             text[0].appendChild(tileXml.createTextNode(data.title));
-            text[1].appendChild(tileXml.createTextNode(data.dueDate));
 
-            //new Date(dueDate.getYear(), dueDate.getMonth(), dueDate.getDate(),);
+            text[1].appendChild(tileXml.createTextNode(new Date(data.dueDate.toString("r")).toLocaleString()));
 
             var currentDate = new Date();
             var seconds = 60;
         
-            if (currentDate >= new Date(data.dueDate)) {
+            if (currentDate.getMilliseconds() >= new Date(data.dueDate.toString("r")).getMilliseconds()) {
                 data.dueDate = new Date(currentDate.getTime() + 60 * 1000);
                 // create the notification from the XML
                 var tileNotification = new Windows.UI.Notifications.ScheduledTileNotification(tileXml, data.dueDate);
