@@ -4,15 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "TodoList", "TodoList\TodoList.jsproj", "{5CA3CA4B-F973-436C-8609-A6A9223659DC}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://tfs.telerik.com:8082/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = TodoList\\TodoList.jsproj
-		SccProjectName1 = TodoList
-		SccLocalPath1 = TodoList
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM

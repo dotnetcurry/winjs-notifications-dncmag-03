@@ -29,7 +29,7 @@
             var seconds = 60;
         
             if (currentDate.getMilliseconds() >= new Date(data.dueDate.toString("r")).getMilliseconds()) {
-                data.dueDate = new Date(currentDate.getTime() + 60 * 1000);
+                data.dueDate = new Date(currentDate.getTime() + 3 * 1000);
                 // create the notification from the XML
                 var tileNotification = new Windows.UI.Notifications.ScheduledTileNotification(tileXml, data.dueDate);
                 tileNotification.id = data.id;

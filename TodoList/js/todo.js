@@ -79,7 +79,7 @@
             var matched = false;
 
             for (var index = 0; index < jSon.length; index++) {
-                if (jSon[index].id == data.id || jSon[index].dueDate < datePicker.winControl.current) {
+                if (jSon[index].id == item.data.id || jSon[index].dueDate < datePicker.winControl.current) {
                     matched = true;
                 }
             }
